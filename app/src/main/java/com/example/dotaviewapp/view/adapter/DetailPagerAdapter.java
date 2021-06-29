@@ -5,6 +5,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
+import com.example.dotaviewapp.view.fragment.HeroFragment;
+import com.example.dotaviewapp.view.fragment.MatchFragment;
+
 public class DetailPagerAdapter extends FragmentPagerAdapter {
 
     public DetailPagerAdapter(FragmentManager fm) {

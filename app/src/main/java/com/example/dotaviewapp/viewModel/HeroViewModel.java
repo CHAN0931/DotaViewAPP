@@ -6,6 +6,9 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.dotaviewapp.model.Hero;
+import com.example.dotaviewapp.util.DotaUtil;
+
 import java.text.DecimalFormat;
 
 import static com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions.withCrossFade;

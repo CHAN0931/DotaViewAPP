@@ -1,6 +1,10 @@
 package com.example.dotaviewapp.data.remote;
 
 
+import com.example.dotaviewapp.model.Hero;
+import com.example.dotaviewapp.model.Match;
+import com.example.dotaviewapp.model.Player;
+
 import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.GET;

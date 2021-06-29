@@ -19,6 +19,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.dotaviewapp.R;
+import com.example.dotaviewapp.data.local.DotaContract;
+import com.example.dotaviewapp.model.Player;
+import com.example.dotaviewapp.viewModel.PlayerViewModel;
+
 public class DetailActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private Uri mUri;
@@ -33,7 +39,7 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
         mBinding = DataBindingUtil.setContentView(this, R.layout.activity_detail);
 
         mPlayer = getIntent().getParcelableExtra("player-parcelable");
-        mUri = ContentUris.withAppendedId(DotaSubscriber.CONTENT_URI, mPlayer.getID());
+        mUri = ContentUris.withAppendedId(DotaContract.DotaSubscriber.CONTENT_URI, mPlayer.getID());
         mBinding.toolbarPlayer.setViewModel(new PlayerViewModel(this, mPlayer));
         mBinding.setViewModel(new PlayerViewModel(this, mPlayer));
         mButtonFollow = findViewById(R.id.buttonToolbar);
@@ -105,7 +111,7 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
 
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
-        Uri uri = ContentUris.withAppendedId(DotaSubscriber.CONTENT_URI, mPlayer.getID());
+        Uri uri = ContentUris.withAppendedId(DotaContract.DotaSubscriber.CONTENT_URI, mPlayer.getID());
         return new CursorLoader(
                 this,
                 uri,

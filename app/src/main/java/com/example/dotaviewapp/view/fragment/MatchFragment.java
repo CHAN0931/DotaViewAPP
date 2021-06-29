@@ -14,6 +14,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
 
+import com.example.dotaviewapp.R;
+import com.example.dotaviewapp.data.remote.OpenDotaClient;
+import com.example.dotaviewapp.model.Match;
+import com.example.dotaviewapp.model.Player;
+import com.example.dotaviewapp.util.NetworkUtil;
+import com.example.dotaviewapp.view.adapter.MatchAdapter;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

@@ -6,6 +6,9 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.dotaviewapp.R;
+import com.example.dotaviewapp.model.Match;
+import com.example.dotaviewapp.util.DotaUtil;
 
 import java.util.concurrent.TimeUnit;
 

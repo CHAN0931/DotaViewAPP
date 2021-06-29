@@ -5,6 +5,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.example.dotaviewapp.model.Hero;
+
 import java.util.List;
 
 public class HeroAdapter extends RecyclerView.Adapter<HeroAdapter.BindingHolder> {

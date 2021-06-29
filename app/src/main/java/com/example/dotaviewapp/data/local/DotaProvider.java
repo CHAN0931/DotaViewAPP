@@ -36,7 +36,7 @@ public class DotaProvider extends ContentProvider {
         switch (sUriMatcher.match(uri)) {
             case CODE_FAVORITE:
                 cursor = dbHelper.getReadableDatabase().query(
-                        DotaSubscriber.TABLE_NAME,
+                        DotaContract.DotaSubscriber.TABLE_NAME,
                         projection,
                         selection,
                         selectionArgs,
@@ -46,10 +46,10 @@ public class DotaProvider extends ContentProvider {
                 break;
 
             case CODE_FAVORITE_ID:
-                selection = DotaSubscriber.COLUMN_ACC_ID + "=?";
+                selection = DotaContract.DotaSubscriber.COLUMN_ACC_ID + "=?";
                 selectionArgs = new String[]{uri.getLastPathSegment()};
                 cursor = dbHelper.getReadableDatabase().query(
-                        DotaSubscriber.TABLE_NAME,
+                        DotaContract.DotaSubscriber.TABLE_NAME,
                         projection,
                         selection,
                         selectionArgs,
@@ -75,7 +75,7 @@ public class DotaProvider extends ContentProvider {
         switch (sUriMatcher.match(uri)) {
             case CODE_FAVORITE:
                 rowsInserted = dbHelper.getWritableDatabase().insert(
-                        DotaSubscriber.TABLE_NAME,
+                        DotaContract.DotaSubscriber.TABLE_NAME,
                         null,
                         values);
                 if (rowsInserted != -1)
@@ -103,10 +103,10 @@ public class DotaProvider extends ContentProvider {
 
         switch (sUriMatcher.match(uri)) {
             case CODE_FAVORITE_ID:
-                selection = DotaSubscriber.COLUMN_ACC_ID + " = ?";
+                selection = DotaContract.DotaSubscriber.COLUMN_ACC_ID + " = ?";
                 selectionArgs = new String[]{uri.getLastPathSegment()};
                 deletedRows = dbHelper.getWritableDatabase().delete(
-                        DotaSubscriber.TABLE_NAME,
+                        DotaContract.DotaSubscriber.TABLE_NAME,
                         selection,
                         selectionArgs);
                 break;

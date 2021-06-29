@@ -15,6 +15,9 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.dotaviewapp.model.Player;
+import com.example.dotaviewapp.view.adapter.PlayerAdapter;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

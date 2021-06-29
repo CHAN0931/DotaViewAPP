@@ -13,6 +13,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.RelativeLayout;
+
+import com.example.dotaviewapp.R;
+import com.example.dotaviewapp.data.local.DotaContract;
+import com.example.dotaviewapp.view.adapter.FavoritesAdapter;
+
 public class HomeActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
 
     private FavoritesAdapter mAdapter;
@@ -56,11 +61,11 @@ public class HomeActivity extends AppCompatActivity implements LoaderManager.Loa
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
         return new CursorLoader(this,
-                DotaSubscriber.CONTENT_URI,
+                DotaContract.DotaSubscriber.CONTENT_URI,
                 null,
                 null,
                 null,
-                DotaSubscriber._ID + " DESC"
+                DotaContract.DotaSubscriber._ID + " DESC"
         );
     }
 

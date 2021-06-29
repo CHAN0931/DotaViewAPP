@@ -15,16 +15,16 @@ public class DotaDbHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql = "CREATE TABLE " + DotaSubscriber.TABLE_NAME + "("
-                + DotaSubscriber._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
-                + DotaSubscriber.COLUMN_AVATAR_URL + " TEXT NOT NULL, "
-                + DotaSubscriber.COLUMN_PLAYER_NAME + " TEXT NOT NULL, "
-                + DotaSubscriber.COLUMN_ACC_ID + " INTEGER NOT NULL);";
+        String sql = "CREATE TABLE " + DotaContract.DotaSubscriber.TABLE_NAME + "("
+                + DotaContract.DotaSubscriber._ID + " INTEGER PRIMARY KEY AUTOINCREMENT, "
+                + DotaContract.DotaSubscriber.COLUMN_AVATAR_URL + " TEXT NOT NULL, "
+                + DotaContract.DotaSubscriber.COLUMN_PLAYER_NAME + " TEXT NOT NULL, "
+                + DotaContract.DotaSubscriber.COLUMN_ACC_ID + " INTEGER NOT NULL);";
         db.execSQL(sql);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP TABLE IF EXISTS " + DotaSubscriber.TABLE_NAME + ";");
+        db.execSQL("DROP TABLE IF EXISTS " + DotaContract.DotaSubscriber.TABLE_NAME + ";");
     }
 }

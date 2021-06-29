@@ -4,6 +4,9 @@ import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
+
+import com.example.dotaviewapp.model.Match;
+
 import java.util.List;
 
 public class MatchAdapter extends RecyclerView.Adapter<MatchAdapter.BindingHolder> {
