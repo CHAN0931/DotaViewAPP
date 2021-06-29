@@ -31,9 +31,6 @@ import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * A simple {@link Fragment} subclass.
- */
 public class HeroFragment extends Fragment implements LoaderManager.LoaderCallbacks<List<Hero>> {
 
     private HeroAdapter mAdapter;

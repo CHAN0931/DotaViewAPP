@@ -11,6 +11,10 @@ import android.view.ViewGroup;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.dotaviewapp.data.local.DotaContract.DotaSubscriber;
+import com.example.dotaviewapp.databinding.ItemPlayerCursorBinding;
+import com.example.dotaviewapp.model.Player;
+import com.example.dotaviewapp.view.activity.DetailActivity;
 
 public class FavoritesAdapter extends RecyclerView.Adapter<FavoritesAdapter.BindingHolder> {
 

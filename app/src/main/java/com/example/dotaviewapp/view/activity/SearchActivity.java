@@ -15,7 +15,10 @@ import android.view.View;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.example.dotaviewapp.R;
+import com.example.dotaviewapp.data.remote.OpenDotaClient;
 import com.example.dotaviewapp.model.Player;
+import com.example.dotaviewapp.util.NetworkUtil;
 import com.example.dotaviewapp.view.adapter.PlayerAdapter;
 
 import java.io.IOException;

@@ -6,7 +6,6 @@ import android.content.ContentValues;
 import android.content.CursorLoader;
 import android.content.Loader;
 import android.database.Cursor;
-import android.databinding.DataBindingUtil;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.AppBarLayout;
@@ -20,9 +19,13 @@ import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.databinding.DataBindingUtil;
+
 import com.example.dotaviewapp.R;
 import com.example.dotaviewapp.data.local.DotaContract;
+import com.example.dotaviewapp.databinding.ActivityDetailBinding;
 import com.example.dotaviewapp.model.Player;
+import com.example.dotaviewapp.view.adapter.DetailPagerAdapter;
 import com.example.dotaviewapp.viewModel.PlayerViewModel;
 
 public class DetailActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor> {
@@ -71,10 +74,10 @@ public class DetailActivity extends AppCompatActivity implements LoaderManager.L
                         .show();
             } else {
                 ContentValues values = new ContentValues();
-                values.put(DotaSubscriber.COLUMN_ACC_ID, mPlayer.getID());
-                values.put(DotaSubscriber.COLUMN_AVATAR_URL, mPlayer.getAvatarUrl());
-                values.put(DotaSubscriber.COLUMN_PLAYER_NAME, mPlayer.getName());
-                getContentResolver().insert(DotaSubscriber.CONTENT_URI, values);
+                values.put(DotaContract.DotaSubscriber.COLUMN_ACC_ID, mPlayer.getID());
+                values.put(DotaContract.DotaSubscriber.COLUMN_AVATAR_URL, mPlayer.getAvatarUrl());
+                values.put(DotaContract.DotaSubscriber.COLUMN_PLAYER_NAME, mPlayer.getName());
+                getContentResolver().insert(DotaContract.DotaSubscriber.CONTENT_URI, values);
             }
         });
         TabLayout tabLayout = findViewById(R.id.tablayout);

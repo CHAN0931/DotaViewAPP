@@ -5,7 +5,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
 
+import com.example.dotaviewapp.databinding.ItemMatchBinding;
 import com.example.dotaviewapp.model.Match;
+import com.example.dotaviewapp.viewModel.MatchViewModel;
 
 import java.util.List;
 

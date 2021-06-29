@@ -2,9 +2,10 @@ package com.example.dotaviewapp.viewModel;
 
 import android.content.Context;
 import android.content.Intent;
-import android.databinding.BindingAdapter;
 import android.view.View;
 import android.widget.ImageView;
+
+import androidx.databinding.BindingAdapter;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
