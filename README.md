@@ -11,6 +11,9 @@ Dota2 search player and view match history, win rate, etc..
 ![herostatus](https://user-images.githubusercontent.com/13824758/123829586-8d318f80-d93d-11eb-9002-dec4ca9412c0.png)
 
 
-Test ID : 82746219, 308430413, 308011234
-OpenDotaAPI (https://api.opendota.com/api/)
-SteamWebAPI (https://steamcommunity.com/dev)
+Test ID : 82746219, 308430413, 308011234    
+    
+sqlite3 +     
+OpenDotaAPI (https://api.opendota.com/api/)    
+SteamWebAPI (https://steamcommunity.com/dev)    
+
