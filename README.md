@@ -15,4 +15,4 @@ sqlite3 +
 OpenDotaAPI (https://api.opendota.com/api/)    
 SteamWebAPI (https://steamcommunity.com/dev)    
     
-ty for templete (https://github.com/nikolajakshic)  
+
